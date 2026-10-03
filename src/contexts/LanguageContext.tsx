@@ -21,6 +21,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.services": "Služby",
     "nav.work": "Naše práce",
     "nav.references": "Referencie",
+    "nav.blog": "Blog",
     "nav.contact": "Kontakt",
     "nav.book": "Objednať sa",
 
@@ -306,6 +307,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.services": "Services",
     "nav.work": "Our Work",
     "nav.references": "References",
+    "nav.blog": "Blog",
     "nav.contact": "Contact",
     "nav.book": "Book Now",
 
