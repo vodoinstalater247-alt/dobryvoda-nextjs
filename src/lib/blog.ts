@@ -6,6 +6,14 @@ export type BlogArticle = {
 };
 const fields = "id,title,slug,excerpt,content_html,cover_image_url,seo_title,seo_description,published_at";
 export const BLOG_PAGE_SIZE = 12;
+export const BLOG_FALLBACK_IMAGES = [
+  "/images/work-1.jpg",
+  "/images/work-2.jpg",
+  "/images/work-3.jpg",
+  "/images/work-4.jpg",
+  "/images/work-5.jpg",
+  "/images/work-6.jpg",
+];
 
 export async function publishedArticles() {
   const { data, error } = await publicSupabase().from("blog_articles").select(fields)
