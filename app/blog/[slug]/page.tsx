@@ -52,7 +52,21 @@ function formatArticleHtml(content: string) {
     },
   );
 
-  return { html, headings };
+  const firstHeadingIndex = html.search(/<h2 id=/i);
+  const intro = firstHeadingIndex > 0 ? html.slice(0, firstHeadingIndex) : "";
+  const sections = firstHeadingIndex > 0 ? html.slice(firstHeadingIndex) : html;
+  const sectionedHtml = sections.replace(
+    /(<h2 id="[^"]+">([\s\S]*?)<\/h2>)([\s\S]*?)(?=<h2 id=|$)/gi,
+    (match, _heading, title: string) => {
+      const isKeyPoints = /kľúčové|klucove|key points|key takeaways/i.test(plainText(title));
+      return `<section class="article-topic${isKeyPoints ? " article-key-points" : ""}">${match}</section>`;
+    },
+  );
+
+  return {
+    html: `${intro ? `<div class="article-intro">${intro}</div>` : ""}${sectionedHtml}`,
+    headings,
+  };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -133,13 +147,14 @@ export default async function ArticlePage({ params }: Props) {
             />
           </div>
 
-          <div className="mx-auto mt-12 grid max-w-6xl gap-10 lg:grid-cols-[210px_minmax(0,1fr)] lg:gap-16">
+          <div className="mx-auto mt-12 grid max-w-6xl gap-10 lg:grid-cols-[236px_minmax(0,1fr)] lg:gap-16">
             {tocHeadings.length > 0 ? (
               <nav aria-label="Obsah článku" className="h-fit border-l-2 border-primary/30 pl-4 lg:sticky lg:top-28">
                 <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">V článku</p>
-                <ol className="mt-4 space-y-3 text-sm leading-5 text-muted-foreground">
-                  {tocHeadings.map((heading) => (
-                    <li key={heading.id}>
+                <ol className="mt-5 space-y-5 text-sm leading-6 text-muted-foreground">
+                  {tocHeadings.map((heading, index) => (
+                    <li key={heading.id} className="flex gap-3">
+                      <span className="mt-0.5 text-xs font-bold text-primary/70">{String(index + 1).padStart(2, "0")}</span>
                       <a className="transition-colors hover:text-primary hover:underline" href={`#${heading.id}`}>
                         {heading.text}
                       </a>
@@ -150,7 +165,7 @@ export default async function ArticlePage({ params }: Props) {
             ) : null}
 
             <div
-              className="prose prose-slate max-w-none text-[1.05rem] leading-8 text-slate-700 prose-headings:font-bold prose-headings:tracking-tight prose-h2:mt-14 prose-h2:scroll-mt-28 prose-h2:border-b prose-h2:border-border prose-h2:pb-4 prose-h2:text-2xl prose-h2:leading-tight sm:prose-h2:text-3xl prose-h3:mt-9 prose-h3:text-xl prose-h3:leading-tight sm:prose-h3:text-2xl prose-p:my-6 prose-p:leading-8 prose-strong:font-bold prose-a:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-ul:my-7 prose-ul:space-y-3 prose-ul:pl-6 prose-ul:marker:text-primary prose-ol:my-7 prose-ol:space-y-3 prose-ol:pl-6 prose-ol:marker:font-bold prose-ol:marker:text-primary prose-li:pl-1 prose-blockquote:my-9 prose-blockquote:rounded-r-xl prose-blockquote:border-primary prose-blockquote:bg-secondary/60 prose-blockquote:px-5 prose-blockquote:py-4 prose-blockquote:font-medium prose-img:my-10 prose-img:w-full prose-img:rounded-2xl prose-img:shadow-lg prose-figure:my-10 prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-muted-foreground"
+              className="prose prose-slate max-w-none text-[1.05rem] leading-8 text-slate-700 prose-headings:font-bold prose-headings:tracking-tight prose-h2:scroll-mt-28 prose-h2:border-b prose-h2:border-border prose-h2:pb-4 prose-h2:text-2xl prose-h2:leading-tight sm:prose-h2:text-3xl prose-h3:mt-10 prose-h3:border-l-2 prose-h3:border-primary/60 prose-h3:pl-4 prose-h3:text-xl prose-h3:leading-tight sm:prose-h3:text-2xl prose-p:my-5 prose-p:leading-8 prose-strong:font-bold prose-a:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-ul:my-7 prose-ul:space-y-3 prose-ul:pl-6 prose-ul:marker:text-primary prose-ol:my-7 prose-ol:space-y-3 prose-ol:pl-6 prose-ol:marker:font-bold prose-ol:marker:text-primary prose-li:pl-1 prose-blockquote:my-9 prose-blockquote:rounded-r-xl prose-blockquote:border-primary prose-blockquote:bg-secondary/60 prose-blockquote:px-5 prose-blockquote:py-4 prose-blockquote:font-medium prose-img:my-10 prose-img:w-full prose-img:rounded-2xl prose-img:shadow-lg prose-figure:my-10 prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-muted-foreground [&_.article-intro]:mb-12 [&_.article-intro>p:first-child]:text-xl [&_.article-intro>p:first-child]:font-medium [&_.article-topic]:mt-14 [&_.article-topic]:border-t [&_.article-topic]:border-border/80 [&_.article-topic]:pt-10 [&_.article-topic>h2]:mt-0 [&_.article-key-points]:rounded-2xl [&_.article-key-points]:border-primary/25 [&_.article-key-points]:bg-primary/[0.04] [&_.article-key-points]:px-6 [&_.article-key-points]:py-2 [&_.article-key-points>h2]:border-0 [&_.article-key-points>h2]:pb-1"
               dangerouslySetInnerHTML={{ __html: formattedContent }}
             />
           </div>
