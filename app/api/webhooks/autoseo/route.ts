@@ -57,7 +57,14 @@ export async function POST(request: NextRequest) {
   const { data, error } = await adminSupabase().from("blog_articles").upsert({
     title: title.slice(0, 240), slug, source: "autoseo", source_id: sourceId, status: "published", published_at: new Date().toISOString(),
     excerpt: firstText(article, ["excerpt", "summary", "description", "meta_description"]) || null,
-    content_html: sanitizeHtml(content, { allowedTags: ["p", "br", "h2", "h3", "h4", "ul", "ol", "li", "strong", "em", "a", "blockquote"], allowedAttributes: { a: ["href", "title", "target", "rel"] }, allowedSchemes: ["http", "https", "mailto"] }),
+    content_html: sanitizeHtml(content, {
+      allowedTags: ["p", "br", "h2", "h3", "h4", "ul", "ol", "li", "strong", "em", "a", "blockquote", "figure", "figcaption", "img"],
+      allowedAttributes: {
+        a: ["href", "title", "target", "rel"],
+        img: ["src", "alt", "title", "width", "height"],
+      },
+      allowedSchemes: ["http", "https", "mailto"],
+    }),
     cover_image_url: firstText(article, ["cover_image_url", "image", "featured_image", "image_url"]) || null,
     seo_title: firstText(article, ["seo_title", "meta_title"]) || null, seo_description: firstText(article, ["seo_description", "meta_description"]) || null,
   }, { onConflict: "source,source_id" }).select("slug").single();
