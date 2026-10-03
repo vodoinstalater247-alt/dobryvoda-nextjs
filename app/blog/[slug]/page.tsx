@@ -52,9 +52,17 @@ function formatArticleHtml(content: string) {
     },
   );
 
-  const firstHeadingIndex = html.search(/<h2 id=/i);
-  const intro = firstHeadingIndex > 0 ? html.slice(0, firstHeadingIndex) : "";
-  const sections = firstHeadingIndex > 0 ? html.slice(firstHeadingIndex) : html;
+  const questionStyledHtml = html.replace(
+    /(<h3 id="[^"]+">([\s\S]*?)<\/h3>)([\s\S]*?)(?=<h[23] id=|$)/gi,
+    (match, heading: string, title: string, answer: string) => {
+      if (!plainText(title).endsWith("?")) return match;
+      return `<div class="article-question">${heading}<div class="article-answer"><span class="article-answer-marker" aria-hidden="true">•</span><div>${answer}</div></div></div>`;
+    },
+  );
+
+  const firstHeadingIndex = questionStyledHtml.search(/<h2 id=/i);
+  const intro = firstHeadingIndex > 0 ? questionStyledHtml.slice(0, firstHeadingIndex) : "";
+  const sections = firstHeadingIndex > 0 ? questionStyledHtml.slice(firstHeadingIndex) : questionStyledHtml;
   const sectionedHtml = sections.replace(
     /(<h2 id="[^"]+">([\s\S]*?)<\/h2>)([\s\S]*?)(?=<h2 id=|$)/gi,
     (match, _heading, title: string) => {
@@ -165,7 +173,7 @@ export default async function ArticlePage({ params }: Props) {
             ) : null}
 
             <div
-              className="prose prose-slate max-w-none text-[1.05rem] leading-8 text-slate-700 prose-headings:font-bold prose-headings:tracking-tight prose-h2:scroll-mt-28 prose-h2:border-b prose-h2:border-border prose-h2:pb-4 prose-h2:text-2xl prose-h2:leading-tight sm:prose-h2:text-3xl prose-h3:mt-10 prose-h3:border-l-2 prose-h3:border-primary/60 prose-h3:pl-4 prose-h3:text-xl prose-h3:leading-tight sm:prose-h3:text-2xl prose-p:my-5 prose-p:leading-8 prose-strong:font-bold prose-a:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-ul:my-7 prose-ul:space-y-3 prose-ul:pl-6 prose-ul:marker:text-primary prose-ol:my-7 prose-ol:space-y-3 prose-ol:pl-6 prose-ol:marker:font-bold prose-ol:marker:text-primary prose-li:pl-1 prose-blockquote:my-9 prose-blockquote:rounded-r-xl prose-blockquote:border-primary prose-blockquote:bg-secondary/60 prose-blockquote:px-5 prose-blockquote:py-4 prose-blockquote:font-medium prose-img:my-10 prose-img:w-full prose-img:rounded-2xl prose-img:shadow-lg prose-figure:my-10 prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-muted-foreground [&_.article-intro]:mb-12 [&_.article-intro>p:first-child]:text-xl [&_.article-intro>p:first-child]:font-medium [&_.article-topic]:mt-14 [&_.article-topic]:border-t [&_.article-topic]:border-border/80 [&_.article-topic]:pt-10 [&_.article-topic>h2]:mt-0 [&_.article-key-points]:rounded-2xl [&_.article-key-points]:border-primary/25 [&_.article-key-points]:bg-primary/[0.04] [&_.article-key-points]:px-6 [&_.article-key-points]:py-2 [&_.article-key-points>h2]:border-0 [&_.article-key-points>h2]:pb-1"
+              className="prose prose-slate max-w-none text-[1.05rem] leading-8 text-slate-700 prose-headings:font-bold prose-headings:tracking-tight prose-h2:scroll-mt-28 prose-h2:border-b prose-h2:border-border prose-h2:pb-4 prose-h2:text-2xl prose-h2:leading-tight sm:prose-h2:text-3xl prose-h3:mt-10 prose-h3:border-l-2 prose-h3:border-primary/60 prose-h3:pl-4 prose-h3:text-xl prose-h3:leading-tight sm:prose-h3:text-2xl prose-p:my-5 prose-p:leading-8 prose-strong:font-bold prose-a:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-ul:my-7 prose-ul:space-y-3 prose-ul:pl-6 prose-ul:marker:text-primary prose-ol:my-7 prose-ol:space-y-3 prose-ol:pl-6 prose-ol:marker:font-bold prose-ol:marker:text-primary prose-li:pl-1 prose-blockquote:my-9 prose-blockquote:rounded-r-xl prose-blockquote:border-primary prose-blockquote:bg-secondary/60 prose-blockquote:px-5 prose-blockquote:py-4 prose-blockquote:font-medium prose-img:my-10 prose-img:w-full prose-img:rounded-2xl prose-img:shadow-lg prose-figure:my-10 prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-muted-foreground [&_.article-intro]:mb-12 [&_.article-intro>p:first-child]:text-xl [&_.article-intro>p:first-child]:font-medium [&_.article-topic]:mt-14 [&_.article-topic]:border-t [&_.article-topic]:border-border/80 [&_.article-topic]:pt-10 [&_.article-topic>h2]:mt-0 [&_.article-key-points]:rounded-2xl [&_.article-key-points]:border-primary/25 [&_.article-key-points]:bg-primary/[0.04] [&_.article-key-points]:px-6 [&_.article-key-points]:py-2 [&_.article-key-points>h2]:border-0 [&_.article-key-points>h2]:pb-1 [&_.article-question]:mt-10 [&_.article-question>h3]:border-l-0 [&_.article-question>h3]:pl-0 [&_.article-question>h3]:text-foreground [&_.article-question>h3]:font-bold [&_.article-answer]:my-5 [&_.article-answer]:flex [&_.article-answer]:gap-3 [&_.article-answer]:rounded-r-xl [&_.article-answer]:border-l-2 [&_.article-answer]:border-primary/35 [&_.article-answer]:bg-secondary/35 [&_.article-answer]:px-5 [&_.article-answer]:py-1 [&_.article-answer-marker]:mt-5 [&_.article-answer-marker]:text-xl [&_.article-answer-marker]:font-bold [&_.article-answer-marker]:text-primary [&_.article-answer>div]:min-w-0"
               dangerouslySetInnerHTML={{ __html: formattedContent }}
             />
           </div>
