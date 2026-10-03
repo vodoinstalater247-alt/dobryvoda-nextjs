@@ -1,0 +1,9 @@
+import Link from "next/link";
+import { requireAdmin } from "@/lib/admin";
+import { adminSupabase } from "@/lib/supabase";
+import { deleteArticle, unpublishArticle } from "./actions";
+
+export const dynamic = "force-dynamic";
+export default async function AdminPage() { await requireAdmin(); const { data: articles } = await adminSupabase().from("blog_articles").select("id,title,slug,status,published_at,source").order("created_at", { ascending: false });
+  return <main className="min-h-screen bg-background p-6 text-foreground md:p-10"><div className="mx-auto max-w-5xl"><div className="flex items-center justify-between gap-4"><div><h1 className="text-3xl font-bold">Správa blogu</h1><p className="mt-1 text-muted-foreground">AutoSEO články sa zverejňujú automaticky.</p></div><Link href="/admin/new" className="rounded-md bg-primary px-4 py-2 font-semibold text-primary-foreground">Nový článok</Link></div><div className="mt-8 overflow-hidden rounded-xl border"><table className="w-full text-left text-sm"><thead className="bg-muted"><tr><th className="p-3">Článok</th><th className="p-3">Stav</th><th className="p-3">Zdroj</th><th className="p-3">Akcie</th></tr></thead><tbody>{articles?.map((article) => <tr key={article.id} className="border-t"><td className="p-3"><strong>{article.title}</strong><br /><span className="text-muted-foreground">/blog/{article.slug}</span></td><td className="p-3">{article.status}</td><td className="p-3">{article.source}</td><td className="flex gap-2 p-3">{article.status === "published" ? <form action={unpublishArticle}><input type="hidden" name="id" value={article.id} /><button className="rounded border px-3 py-1">Skryť</button></form> : null}<form action={deleteArticle}><input type="hidden" name="id" value={article.id} /><button className="rounded border border-destructive px-3 py-1 text-destructive">Zmazať</button></form></td></tr>)}</tbody></table></div></div></main>;
+}
