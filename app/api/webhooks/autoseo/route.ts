@@ -63,5 +63,5 @@ export async function POST(request: NextRequest) {
   }, { onConflict: "source,source_id" }).select("slug").single();
   if (error) { console.error(error); return NextResponse.json({ error: "Unable to publish article" }, { status: 500 }); }
   revalidatePath("/blog"); revalidatePath(`/blog/${data.slug}`); revalidatePath("/sitemap.xml");
-  return NextResponse.json({ ok: true, slug: data.slug }, { status: 201 });
+  return NextResponse.json({ ok: true, slug: data.slug });
 }
