@@ -2,6 +2,7 @@ import { createHash, timingSafeEqual } from "crypto";
 import { revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 import sanitizeHtml from "sanitize-html";
+import { extractCoverImageUrl } from "@/lib/autoseo-image";
 import { adminSupabase } from "@/lib/supabase";
 
 export const runtime = "nodejs";
@@ -65,7 +66,7 @@ export async function POST(request: NextRequest) {
       },
       allowedSchemes: ["http", "https", "mailto"],
     }),
-    cover_image_url: firstText(article, ["cover_image_url", "image", "featured_image", "image_url"]) || null,
+    cover_image_url: extractCoverImageUrl(article),
     seo_title: firstText(article, ["seo_title", "meta_title"]) || null, seo_description: firstText(article, ["seo_description", "meta_description"]) || null,
   }, { onConflict: "source,source_id" }).select("slug").single();
   if (error) { console.error(error); return NextResponse.json({ error: "Unable to publish article" }, { status: 500 }); }
