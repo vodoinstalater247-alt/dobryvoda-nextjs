@@ -7,6 +7,7 @@ import { Phone, MapPin, Send, Clock, MessageCircle, Loader2 } from "lucide-react
 import { toast } from "@/hooks/use-toast";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
+import PrivacyNotice from "@/components/PrivacyNotice";
 
 const ContactSection = () => {
   const headerRef = useScrollAnimation({ threshold: 0.2 });
@@ -152,6 +153,7 @@ const ContactSection = () => {
                 onInvalid={(e) => (e.target as HTMLTextAreaElement).setCustomValidity(t("contact.validation.message"))}
                 onInput={(e) => (e.target as HTMLTextAreaElement).setCustomValidity("")}
               />
+              <PrivacyNotice />
               <Button type="submit" variant="hero" size="lg" className="w-full group mt-auto" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <Loader2 className="h-5 w-5 animate-spin" />

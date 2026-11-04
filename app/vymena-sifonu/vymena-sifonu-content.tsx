@@ -11,6 +11,7 @@ import { toast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingPhoneButton from "@/components/FloatingPhoneButton";
+import PrivacyNotice from "@/components/PrivacyNotice";
 
 export default function VymenaSifonuContent() {
   const [formData, setFormData] = useState({
@@ -479,6 +480,7 @@ export default function VymenaSifonuContent() {
                   required
                   className="bg-background border-border text-foreground placeholder:text-muted-foreground resize-none min-h-[100px]"
                 />
+                <PrivacyNotice />
                 <Button type="submit" size="lg" variant="hero" className="w-full group" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <Loader2 className="h-5 w-5 animate-spin" />
