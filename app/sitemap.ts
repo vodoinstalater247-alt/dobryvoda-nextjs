@@ -6,6 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const pages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
+    { url: `${baseUrl}/ochrana-osobnych-udajov`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/vymena-sifonu`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/oprava-wc`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/montaz-baterie`, changeFrequency: "monthly", priority: 0.9 },
@@ -16,10 +17,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/montaz-sanity`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/oprava-kurenia`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/montaz-bojleru`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/montaz-umyvadla`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/vymena-rozvodov`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/kanalizacia`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/krtkovanie`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/filtre-na-vodu`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/upchaty-odpad`, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   try {

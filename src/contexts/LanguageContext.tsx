@@ -67,6 +67,8 @@ const translations: Record<Language, Record<string, string>> = {
     "services.regular.9": "Montáž vykurovania v bytoch a domoch (radiátory, rozvody, prípojky)",
     "services.pricing.title": "Ceny sú individuálne",
     "services.pricing.description": "Presná suma závisí od typu práce a stavu zariadenia. Pre presnú cenu ma kontaktujte telefonicky alebo správou.",
+    "service.related.title": "Súvisiace služby",
+    "service.related.link": "Zistiť viac",
 
     // Our Work
     "work.label": "Naše práce",
@@ -353,6 +355,8 @@ const translations: Record<Language, Record<string, string>> = {
     "services.regular.9": "Heating installation (radiators, pipes, connections)",
     "services.pricing.title": "Prices are individual",
     "services.pricing.description": "The exact amount depends on the type of work and condition of the equipment. Contact me by phone or message for an exact price.",
+    "service.related.title": "Related services",
+    "service.related.link": "Learn more",
 
     // Our Work
     "work.label": "Our Work",

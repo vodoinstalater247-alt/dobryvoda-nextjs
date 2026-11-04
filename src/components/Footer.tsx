@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, MapPin, Clock, Shield } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { businessProfile } from "@/lib/business-profile";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -89,12 +90,12 @@ const Footer = () => {
                   className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   <Phone className="h-5 w-5 flex-shrink-0" />
-                  0944 562 059
+                  {businessProfile.phoneDisplay}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/421944562059"
+                  href={`https://wa.me/${businessProfile.phone.slice(1)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
@@ -118,8 +119,8 @@ const Footer = () => {
                 <div className="flex items-center gap-3 text-primary-foreground/70">
                   <MapPin className="h-5 w-5 flex-shrink-0" />
                   <div>
-                    <div>Zuzany Chalupovej 15/A</div>
-                    <div>851 07 Bratislava</div>
+                    <div>{businessProfile.serviceArea}</div>
+                    <div className="text-sm">Služby u zákazníka</div>
                   </div>
                 </div>
               </li>

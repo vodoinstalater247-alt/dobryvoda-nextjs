@@ -1,12 +1,51 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingPhoneButton from "@/components/FloatingPhoneButton";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { CheckCircle2, Phone, ArrowRight } from "lucide-react";
+
+const relatedServices: Record<string, { href: string; translationKey: string }[]> = {
+  boiler: [
+    { href: "/vymena-ventilov", translationKey: "valve" },
+    { href: "/oprava-potrubia", translationKey: "pipe" },
+    { href: "/montaz-sanity", translationKey: "sanitary" },
+  ],
+  wc: [
+    { href: "/vymena-sifonu", translationKey: "siphon" },
+    { href: "/montaz-sanity", translationKey: "sanitary" },
+    { href: "/kanalizacia", translationKey: "pipe" },
+  ],
+  faucet: [
+    { href: "/vymena-ventilov", translationKey: "valve" },
+    { href: "/vymena-sifonu", translationKey: "siphon" },
+    { href: "/montaz-sanity", translationKey: "sanitary" },
+  ],
+  shower: [
+    { href: "/montaz-sanity", translationKey: "sanitary" },
+    { href: "/vymena-sifonu", translationKey: "siphon" },
+    { href: "/oprava-potrubia", translationKey: "pipe" },
+  ],
+  appliance: [
+    { href: "/vymena-ventilov", translationKey: "valve" },
+    { href: "/vymena-sifonu", translationKey: "siphon" },
+    { href: "/kanalizacia", translationKey: "pipe" },
+  ],
+  valve: [
+    { href: "/oprava-potrubia", translationKey: "pipe" },
+    { href: "/montaz-baterie", translationKey: "faucet" },
+    { href: "/zapojenie-spotrebicov", translationKey: "appliance" },
+  ],
+  pipes: [
+    { href: "/oprava-potrubia", translationKey: "pipe" },
+    { href: "/montaz-sanity", translationKey: "sanitary" },
+    { href: "/montaz-bojleru", translationKey: "boiler" },
+  ],
+};
 
 interface ServiceLayoutProps {
   translationKey: string;
@@ -15,6 +54,7 @@ interface ServiceLayoutProps {
 
 const ServiceLayout = ({ translationKey, image }: ServiceLayoutProps) => {
   const { t } = useLanguage();
+  const related = relatedServices[translationKey] ?? [];
 
   return (
     <main className="min-h-screen">
@@ -88,6 +128,52 @@ const ServiceLayout = ({ translationKey, image }: ServiceLayoutProps) => {
           </div>
         </div>
       </section>
+
+      <section className="py-12 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto rounded-2xl border border-primary/15 bg-background p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-5">
+            <div className="flex-1">
+              <h2 className="font-display text-2xl font-bold mb-2">{t("services.pricing.title")}</h2>
+              <p className="text-muted-foreground">{t("services.pricing.description")}</p>
+            </div>
+            <Button variant="outline" asChild className="shrink-0">
+              <a href="tel:+421944562059">
+                <Phone className="mr-2 h-4 w-4" />
+                {t("hero.cta.call")}
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {related.length > 0 && (
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-3 block">
+                {t("services.label")}
+              </span>
+              <h2 className="font-display text-3xl font-bold mb-7">{t("service.related.title")}</h2>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {related.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="group rounded-xl border border-border p-5 hover:border-primary/40 hover:shadow-md transition-all"
+                  >
+                    <span className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {t(`${service.translationKey}.hero.title`)}
+                    </span>
+                    <span className="mt-3 flex items-center text-sm font-medium text-primary">
+                      {t("service.related.link")} <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section id="kontakt" className="py-20 bg-primary text-primary-foreground">

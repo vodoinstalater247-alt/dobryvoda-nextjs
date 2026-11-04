@@ -4,7 +4,7 @@
 
 export const seoData: Record<
   string,
-  { title: string; description: string; keywords: string; slug: string }
+  { title: string; description: string; slug: string }
 > = {
   siphon: {
     slug: "vymena-sifonu",
@@ -13,8 +13,6 @@ export const seoData: Record<
     // 151 chars
     description:
       "Profesionálna výmena sifónu v kuchyni, kúpeľni a WC. Riešime pretekanie, zápach a upchaté sifóny. Rýchly výjazd v Bratislave. Volajte 0944 562 059.",
-    keywords:
-      "výmena sifónu, oprava sifónu, montáž sifónu, sifón umývadlo, sifón vaňa, pretekajúci sifón, vodoinštalatér bratislava",
   },
   wc: {
     slug: "oprava-wc",
@@ -23,8 +21,6 @@ export const seoData: Record<
     // 155 chars
     description:
       "Rýchla oprava pretekajúceho WC, výmena splachovača a montáž nových toaliet v Bratislave. Geberit servis. Rýchly výjazd, férové ceny. Volajte 0944 562 059.",
-    keywords:
-      "oprava wc bratislava, pretekajúce wc, výmena záchoda, montáž geberit, inštalatér wc",
   },
   faucet: {
     slug: "montaz-baterie",
@@ -33,8 +29,6 @@ export const seoData: Record<
     // 155 chars
     description:
       "Odborná montáž a výmena vodovodných batérií v Bratislave. Oprava kvapkajúcich kohútikov v kuchyni a kúpeľni. Profesionálny prístup. Volajte 0944 562 059.",
-    keywords:
-      "výmena batérie, montáž vodovodnej batérie, kvapkajúci kohútik, inštalácia batérie bratislava",
   },
   pipe: {
     slug: "oprava-potrubia",
@@ -43,8 +37,6 @@ export const seoData: Record<
     // 155 chars
     description:
       "Havarijná oprava vodovodného potrubia v Bratislave. Lokalizácia a odstránenie úniku vody. Rýchly výjazd do 60 minút. Pohotovosť 24/7. Volajte 0944 562 059.",
-    keywords:
-      "oprava potrubia, prasknuté potrubie, únik vody bratislava, havarijná služba voda, inštalatér potrubie",
   },
   shower: {
     slug: "montaz-sprchy",
@@ -53,8 +45,6 @@ export const seoData: Record<
     // 153 chars
     description:
       "Profesionálna montáž sprchových kútov, vaničiek a zásten v Bratislave. Silikónovanie a utesnenie sprchy. Kvalitná práca, férové ceny. Volajte 0944 562 059.",
-    keywords:
-      "montáž sprchového kúta, inštalácia sprchy, výmena sprchovej vaničky, silikónovanie sprchy, vodár bratislava",
   },
   appliance: {
     slug: "zapojenie-spotrebicov",
@@ -63,8 +53,6 @@ export const seoData: Record<
     // 152 chars
     description:
       "Odborné zapojenie práčky, umývačky riadu a sušičky v Bratislave. Úprava prívodu vody a odpadu. Pečiatka pre záruku. Rýchly servis. Volajte 0944 562 059.",
-    keywords:
-      "zapojenie práčky, zapojenie umývačky, inštalácia spotrebičov, pripojenie vody, vodár bratislava",
   },
   valve: {
     slug: "vymena-ventilov",
@@ -73,8 +61,6 @@ export const seoData: Record<
     // 152 chars
     description:
       "Výmena nefunkčných a starých rohových ventilov pod umývadlom, pri WC alebo práčke v Bratislave. Predíďte vytopeniu. Rýchly výjazd. Volajte 0944 562 059.",
-    keywords:
-      "výmena rohového ventilu, oprava ventilu, nefunkčný ventil, vodársky ventil, poistný ventil",
   },
   sanitary: {
     slug: "montaz-sanity",
@@ -83,8 +69,6 @@ export const seoData: Record<
     // 154 chars
     description:
       "Kompletná montáž sanity do kúpeľne a kuchyne v Bratislave. Osadenie umývadla, vane, bidetu a kuchynského drezu. Profesionálna práca. Volajte 0944 562 059.",
-    keywords:
-      "montáž sanity, osadenie umývadla, montáž vane, inštalácia drezu, rekonštrukcia kúpeľne",
   },
   heating: {
     slug: "oprava-kurenia",
@@ -93,8 +77,6 @@ export const seoData: Record<
     // 153 chars
     description:
       "Montáž, výmena a oprava radiátorov v Bratislave. Riešenie tečúcich ventilov a odvzdušnenie systému. Kúrenárske práce s garanciou. Volajte 0944 562 059.",
-    keywords:
-      "výmena radiátora, oprava kúrenia, tečúci radiátor, montáž radiátorov, kúrenár bratislava",
   },
   boiler: {
     slug: "montaz-bojleru",
@@ -103,8 +85,6 @@ export const seoData: Record<
     // 153 chars
     description:
       "Profesionálna výmena elektrických bojlerov v Bratislave. Zapojenie vody a elektriny, uvedenie do prevádzky. Odvoz starého bojlera. Volajte 0944 562 059.",
-    keywords:
-      "výmena bojlera, montáž bojlera, elektrický bojler, zapojenie ohrievača vody, servis bojlerov",
   },
   pipes: {
     slug: "vymena-rozvodov",
@@ -113,8 +93,6 @@ export const seoData: Record<
     // 155 chars
     description:
       "Kompletná výmena vodovodných a odpadových rozvodov v bytoch a domoch v Bratislave. Rekonštrukcia stúpačiek a inštalácií. Férové ceny. Volajte 0944 562 059.",
-    keywords:
-      "výmena rozvodov vody, rekonštrukcia vody, nové potrubie, inštalatérske práce, voda odpad plyn",
   },
 };
 

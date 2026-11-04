@@ -25,9 +25,7 @@ export const metadata: Metadata = {
   },
   description:
     "Profesionálny vodoinštalatér v Bratislave a okolí. Rýchle opravy potrubí, montáž sanity, čistenie odpadov a havarijná služba 24/7. Volajte 0944 562 059.",
-  keywords:
-    "vodoinštalatér bratislava, oprava vody, havarijná služba voda, čistenie odpadov, inštalatér, výmena batérie, dobrý vodár",
-  authors: [{ name: "DobryVodar" }],
+  authors: [{ name: "Dobrý Vodar s. r. o." }],
   openGraph: {
     type: "website",
     locale: "sk_SK",
@@ -59,8 +57,6 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "SK-BL",
     "geo.placename": "Bratislava",
-    "geo.position": "48.1486;17.1077",
-    ICBM: "48.1486, 17.1077",
   },
   alternates: {
     canonical: "https://dobryvodar.sk",
