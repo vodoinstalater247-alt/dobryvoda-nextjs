@@ -159,11 +159,11 @@ const Footer = () => {
           <p className="text-primary-foreground/60 text-sm">
             © {currentYear} Dobrý vodár. {t("footer.copyright")}
           </p>
-          <p className="text-primary-foreground/40 text-xs">
+          <p className="text-primary-foreground/60 text-xs">
             <Link href="/ochrana-osobnych-udajov" className="mr-4 hover:text-primary-foreground transition-colors underline underline-offset-2">Ochrana osobných údajov</Link>
             <button type="button" onClick={() => window.dispatchEvent(new Event("dobryvodar-open-cookie-settings"))} className="hover:text-primary-foreground transition-colors underline underline-offset-2">Nastavenia cookies</button>
           </p>
-          <p className="text-primary-foreground/40 text-xs">
+          <p className="text-primary-foreground/60 text-xs">
             Made by{" "}
             <a
               href="https://vlad-weby.sk"
