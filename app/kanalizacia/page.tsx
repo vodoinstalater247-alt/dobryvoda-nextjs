@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   title: "Krtkovanie a čistenie kanalizácie Bratislava | Dobrý Vodár",
   // 155 chars
   description:
-    "Profesionálne krtkovanie a čistenie kanalizácie v Bratislave. Technológia Ridgid FlexShaft K9-102. Rýchly výjazd, férové ceny. Volajte 0944 562 059.",
+    "Profesionálne krtkovanie a čistenie kanalizácie v Bratislave. Technológia Ridgid FlexShaft K9-102. Postup a termín zásahu dohodneme podľa situácie. Volajte 0944 562 059.",
   keywords:
     "krtkovanie, čistenie kanalizácie, upchatý odpad, profesionálne čistenie potrubia, krtkovanie bratislava, ridgid flexshaft",
   alternates: { canonical: "https://dobryvodar.sk/kanalizacia" },
   openGraph: {
     title: "Krtkovanie a čistenie kanalizácie Bratislava | Dobrý Vodár",
     description:
-      "Profesionálne krtkovanie a čistenie kanalizácie v Bratislave. Technológia Ridgid FlexShaft K9-102. Rýchly výjazd, férové ceny. Volajte 0944 562 059.",
+      "Profesionálne krtkovanie a čistenie kanalizácie v Bratislave. Technológia Ridgid FlexShaft K9-102. Postup a termín zásahu dohodneme podľa situácie. Volajte 0944 562 059.",
     url: "https://dobryvodar.sk/kanalizacia",
   },
 };
@@ -36,7 +36,7 @@ const pageFaqs = [
   },
   {
     question: "Ako rýchlo prídete?",
-    answer: "V Bratislave sme u vás do 60 minút od zavolania. Službu poskytujeme aj cez víkendy.",
+    answer: "Termín zásahu dohodneme podľa typu problému, lokality a aktuálnej dostupnosti.",
   },
   {
     question: "Je FlexShaft bezpečný pre staršie potrubie?",

@@ -10,14 +10,14 @@ import OpravaPotrabiaContent from "./oprava-potrubia-content";
 export const metadata: Metadata = {
   title: "Oprava prasknutého potrubia Bratislava | Únik vody | Dobrý Vodár",
   description:
-    "Havarijná oprava vodovodného potrubia v Bratislave. Lokalizácia a odstránenie úniku vody. Rýchly výjazd do 60 minút. Volajte 0944 562 059.",
+    "Havarijná oprava vodovodného potrubia v Bratislave. Lokalizácia a odstránenie úniku vody. Termín zásahu dohodneme podľa situácie. Volajte 0944 562 059.",
   keywords:
     "oprava potrubia, prasknuté potrubie, únik vody bratislava, havarijná služba voda, inštalatér potrubie, oprava rozvodov",
   alternates: { canonical: "https://dobryvodar.sk/oprava-potrubia" },
   openGraph: {
     title: "Oprava prasknutého potrubia Bratislava | Únik vody | Dobrý Vodár",
     description:
-      "Havarijná oprava vodovodného potrubia v Bratislave. Lokalizácia a odstránenie úniku vody. Rýchly výjazd do 60 minút. Volajte 0944 562 059.",
+      "Havarijná oprava vodovodného potrubia v Bratislave. Lokalizácia a odstránenie úniku vody. Termín zásahu dohodneme podľa situácie. Volajte 0944 562 059.",
     url: "https://dobryvodar.sk/oprava-potrubia",
   },
 };
@@ -30,7 +30,7 @@ const breadcrumbs = [
 const pageFaqs = [
   {
     question: "Ako rýchlo prídete pri havárii?",
-    answer: "V prípade havarijných situácií sa snažíme prísť čo najrýchlejšie, zvyčajne do 60 minút v rámci Bratislavy. Pri bežných objednávkach dohodneme termín do 24-48 hodín.",
+    answer: "Pri havárii nám stručne opíšte situáciu. Termín zásahu dohodneme podľa naliehavosti, lokality a aktuálnej dostupnosti.",
   },
   {
     question: "Opravujete aj staré oceľové potrubie?",
@@ -38,7 +38,7 @@ const pageFaqs = [
   },
   {
     question: "Koľko stojí oprava prasknutého potrubia?",
-    answer: "Cena závisí od typu poruchy, materiálu potrubia a náročnosti prístupu. Vždy poskytneme cenovú ponuku pred začatím prác. Bežná oprava sa pohybuje od 60 do 200 €.",
+    answer: "Cena závisí od typu poruchy, materiálu potrubia a náročnosti prístupu. Pred začatím si potvrdíme postup a cenu.",
   },
   {
     question: "Pracujete aj cez víkendy?",

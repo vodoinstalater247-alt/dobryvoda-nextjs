@@ -117,11 +117,11 @@ export default function KrtkovanieContent() {
       icon: Phone,
       title: "Telefonická konzultácia",
       description:
-        "Opíšete nám problém a my vám hneď poradíme predbežné riešenie. Dohodneme termín návštevy – väčšinou do 60 minút.",
+        "Opíšete nám problém a my vám hneď poradíme predbežné riešenie. Termín návštevy dohodneme podľa typu upchatia a dostupnosti.",
     },
     {
       icon: Zap,
-      title: "Rýchly výjazd k vám",
+      title: "Zásah u zákazníka",
       description:
         "Technik príde priamo k vám domov s kompletným vybavením. Nemusíte nič pripravovať ani zabezpečovať.",
     },
@@ -133,9 +133,9 @@ export default function KrtkovanieContent() {
     },
     {
       icon: CheckCircle,
-      title: "Kontrola a záruka",
+      title: "Kontrola po vyčistení",
       description:
-        "Po vyčistení skontrolujeme prietok vody a uistíme sa, že je všetko v poriadku. Na prácu poskytujeme záruku.",
+        "Po vyčistení skontrolujeme prietok vody a spolu si overíme výsledok zásahu.",
     },
   ];
 
@@ -160,13 +160,13 @@ export default function KrtkovanieContent() {
   const trustPoints = [
     {
       icon: Zap,
-      title: "Rýchly výjazd do 60 min",
-      description: "V celej Bratislave sme u vás do hodiny od zavolania. Službu poskytujeme aj cez víkendy.",
+      title: "Dohodnutie termínu",
+      description: "Termín zásahu dohodneme podľa typu upchatia, prístupnosti a dostupnosti.",
     },
     {
       icon: Shield,
-      title: "Férové ceny bez prekvapení",
-      description: "Cenu vám povieme vopred, bez skrytých poplatkov. Platíte len za reálne vykonanú prácu.",
+      title: "Rozsah práce vopred",
+      description: "Pred začatím si potvrdíme postup, potrebný materiál a cenu.",
     },
     {
       icon: Star,
@@ -179,12 +179,12 @@ export default function KrtkovanieContent() {
     {
       question: "Koľko stojí krtkovanie?",
       answer:
-        "Cena závisí od typu upchatia, priemeru potrubia a prístupnosti. Orientačnú cenu vám povieme už pri telefonáte. Neúčtujeme si žiadne skryté poplatky – cenu poznáte vopred.",
+        "Cena závisí od typu upchatia, priemeru potrubia a prístupnosti. Pred začatím si potvrdíme postup a cenu.",
     },
     {
       question: "Ako rýchlo prídete?",
       answer:
-        "V Bratislave sme u vás do 60 minút od zavolania. Službu poskytujeme pondelok až piatok od 7:00 do 17:00, pri haváriách aj cez víkendy a sviatky.",
+        "Termín zásahu dohodneme podľa typu upchatia, prístupnosti a aktuálnej dostupnosti.",
     },
     {
       question: "Pomôže mi krtkovanie, ak mám starý dom s liatinovým potrubím?",
@@ -223,7 +223,7 @@ export default function KrtkovanieContent() {
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Upchatý odpad? Vyriešime to rýchlo a čisto. Moderná technika{" "}
-              <strong className="text-primary">Ridgid FlexShaft</strong>, výjazd do 60 minút v celej Bratislave.
+              <strong className="text-primary">Ridgid FlexShaft</strong> a termín zásahu dohodnutý podľa situácie.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -242,15 +242,15 @@ export default function KrtkovanieContent() {
             <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Výjazd do 60 min</span>
+                <span>Dohodnutie termínu</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Bez skrytých poplatkov</span>
+                <span>Rozsah práce vopred</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Záruka na prácu</span>
+                <span>Kontrola po vyčistení</span>
               </div>
             </div>
           </div>
@@ -421,7 +421,7 @@ export default function KrtkovanieContent() {
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Poskytujeme služby krtkovania v celej Bratislave a blízkom okolí.
-                Rýchly výjazd zabezpečíme do všetkých mestských častí.
+                Termín zásahu dohodneme podľa lokality a aktuálnej dostupnosti.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">

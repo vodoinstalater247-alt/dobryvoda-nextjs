@@ -42,7 +42,7 @@ export const localBusinessSchema = {
   priceRange: "$$",
   paymentAccepted: "Hotovosť, Bankový prevod",
   currenciesAccepted: "EUR",
-  knowsLanguage: ["sk", "uk", "ru"],
+  knowsLanguage: ["sk", "en"],
   sameAs: businessProfile.socialProfiles,
   hasOfferCatalog: {
     "@type": "OfferCatalog",

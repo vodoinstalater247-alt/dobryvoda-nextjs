@@ -108,15 +108,15 @@ export default function OpravaPotrabiaContent() {
   ];
 
   const trustPoints = [
-    { icon: Zap, title: "Rýchly výjazd", description: "Do 60 minút v Bratislave" },
-    { icon: Shield, title: "Férové ceny", description: "Bez skrytých poplatkov" },
-    { icon: Star, title: "Profesionálny prístup", description: "Skúsení technici s praxou" }
+    { icon: Zap, title: "Dohodnutie termínu", description: "Termín zásahu dohodneme podľa typu práce a dostupnosti" },
+    { icon: Shield, title: "Rozsah práce vopred", description: "Pred začatím si potvrdíme postup, materiál a cenu" },
+    { icon: Star, title: "Služby u zákazníka", description: "Pracujeme v Bratislave a okolí" }
   ];
 
   const faqs = [
     {
       question: "Ako rýchlo prídete pri havárii?",
-      answer: "V prípade havarijných situácií sa snažíme prísť čo najrýchlejšie, zvyčajne do 60 minút v rámci Bratislavy. Pri bežných objednávkach dohodneme termín do 24-48 hodín."
+      answer: "Pri havárii nám stručne opíšte situáciu. Termín zásahu dohodneme podľa naliehavosti, lokality a aktuálnej dostupnosti."
     },
     {
       question: "Opravujete aj staré oceľové potrubie?",
@@ -124,7 +124,7 @@ export default function OpravaPotrabiaContent() {
     },
     {
       question: "Koľko stojí oprava prasknutého potrubia?",
-      answer: "Cena závisí od typu poruchy, materiálu potrubia a náročnosti prístupu. Vždy poskytneme cenovú ponuku pred začatím prác. Bežná oprava sa pohybuje od 60 do 200 €."
+      answer: "Cena závisí od typu poruchy, materiálu potrubia a náročnosti prístupu. Pred začatím si potvrdíme postup a cenu."
     },
     {
       question: "Pracujete aj cez víkendy?",
@@ -171,15 +171,15 @@ export default function OpravaPotrabiaContent() {
             <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Výjazd do 60 min</span>
+                <span>Dohodnutie termínu</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Férové ceny</span>
+                <span>Rozsah práce vopred</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Záruka na prácu</span>
+                <span>Služby v Bratislave a okolí</span>
               </div>
             </div>
           </div>

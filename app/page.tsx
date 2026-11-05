@@ -23,7 +23,7 @@ const faqsForSchema = [
   {
     question: "Ako rýchlo môžete prísť?",
     answer:
-      "V prípade bežných objednávok príjdeme do 24-48 hodín. Pri naliehavých situáciách poskytujeme pohotovostnú službu s príjazdom do 60 minút.",
+      "Termín zásahu dohodneme podľa typu práce, naliehavosti a aktuálnej dostupnosti.",
   },
   {
     question: "Aké služby ponúkate?",
@@ -38,7 +38,7 @@ const faqsForSchema = [
   {
     question: "Koľko stojí vaša služba?",
     answer:
-      "Ceny závisia od typu práce. Vždy poskytujeme bezplatnú cenovú ponuku pred začatím prác, aby ste presne vedeli, čo očakávať. Bez skrytých poplatkov.",
+      "Cena závisí od typu práce a rozsahu zásahu. Pred začatím si potvrdíme postup a cenu.",
   },
   {
     question: "Pracujete aj cez víkendy?",

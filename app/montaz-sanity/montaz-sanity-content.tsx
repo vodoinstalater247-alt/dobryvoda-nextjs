@@ -113,9 +113,9 @@ export default function MontazSanityContent() {
   ];
 
   const trustPoints = [
-    { icon: Zap, title: "Rýchly výjazd", description: "Do 60 minút v Bratislave" },
-    { icon: Shield, title: "Férové ceny", description: "Bez skrytých poplatkov" },
-    { icon: Star, title: "Profesionálny prístup", description: "Skúsení technici s praxou" }
+    { icon: Zap, title: "Dohodnutie termínu", description: "Termín zásahu dohodneme podľa typu práce a dostupnosti" },
+    { icon: Shield, title: "Rozsah práce vopred", description: "Pred začatím si potvrdíme postup, materiál a cenu" },
+    { icon: Star, title: "Služby u zákazníka", description: "Pracujeme v Bratislave a okolí" }
   ];
 
   const faqs = [
@@ -175,15 +175,15 @@ export default function MontazSanityContent() {
             <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Výjazd do 60 min</span>
+                <span>Dohodnutie termínu</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Férové ceny</span>
+                <span>Rozsah práce vopred</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span>Záruka na prácu</span>
+                <span>Služby v Bratislave a okolí</span>
               </div>
             </div>
           </div>

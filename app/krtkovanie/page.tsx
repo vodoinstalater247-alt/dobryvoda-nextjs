@@ -10,14 +10,14 @@ import KrtkovanieContent from "./krtkovanie-content";
 export const metadata: Metadata = {
   title: "Krtkovanie Bratislava | Čistenie odpadov 24/7 | Dobrý Vodár",
   description:
-    "Profesionálne krtkovanie a čistenie upchatých odpadov v Bratislave. Moderná technika Ridgid FlexShaft, výjazd do 60 min. Volajte 0944 562 059.",
+    "Profesionálne krtkovanie a čistenie upchatých odpadov v Bratislave. Moderná technika Ridgid FlexShaft. Termín zásahu dohodneme podľa situácie. Volajte 0944 562 059.",
   keywords:
     "krtkovanie, krtkovanie bratislava, čistenie odpadov, upchatý odpad, upchatý drez, čistenie potrubia, krtkovanie cena",
   alternates: { canonical: "https://dobryvodar.sk/krtkovanie" },
   openGraph: {
     title: "Krtkovanie Bratislava | Čistenie odpadov 24/7 | Dobrý Vodár",
     description:
-      "Profesionálne krtkovanie a čistenie upchatých odpadov v Bratislave. Moderná technika Ridgid FlexShaft, výjazd do 60 min. Volajte 0944 562 059.",
+      "Profesionálne krtkovanie a čistenie upchatých odpadov v Bratislave. Moderná technika Ridgid FlexShaft. Termín zásahu dohodneme podľa situácie. Volajte 0944 562 059.",
     url: "https://dobryvodar.sk/krtkovanie",
   },
 };
@@ -31,12 +31,12 @@ const pageFaqs = [
   {
     question: "Koľko stojí krtkovanie?",
     answer:
-      "Cena závisí od typu upchatia a prístupu k potrubiu. Orientačnú cenu vám povieme už pri telefonáte. Bez skrytých poplatkov.",
+      "Cena závisí od typu upchatia a prístupu k potrubiu. Pred začatím si potvrdíme postup a cenu.",
   },
   {
     question: "Ako rýchlo prídete?",
     answer:
-      "V Bratislave sme u vás do 60 minút od zavolania. Službu poskytujeme aj cez víkendy a sviatky.",
+      "Termín zásahu dohodneme podľa typu upchatia, prístupnosti a aktuálnej dostupnosti.",
   },
   {
     question: "Pomôže mi krtkovanie, ak mám starý dom s liatinovým potrubím?",
