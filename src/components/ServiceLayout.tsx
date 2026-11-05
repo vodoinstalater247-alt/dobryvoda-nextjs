@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { CheckCircle2, Phone, ArrowRight } from "lucide-react";
+import { portfolioWorks } from "@/lib/portfolio-gallery";
 
 const relatedServices: Record<string, { href: string; translationKey: string }[]> = {
   boiler: [
@@ -53,6 +54,13 @@ const relatedServices: Record<string, { href: string; translationKey: string }[]
   ],
 };
 
+const portfolioServicePaths: Record<string, string[]> = {
+  wc: ["/oprava-wc"],
+  faucet: ["/montaz-baterie"],
+  shower: ["/montaz-sprchy"],
+  pipes: ["/vymena-rozvodov", "/oprava-potrubia"],
+};
+
 interface ServiceLayoutProps {
   translationKey: string;
   image: string;
@@ -61,6 +69,9 @@ interface ServiceLayoutProps {
 const ServiceLayout = ({ translationKey, image }: ServiceLayoutProps) => {
   const { t } = useLanguage();
   const related = relatedServices[translationKey] ?? [];
+  const portfolio = portfolioWorks.filter((work) =>
+    (portfolioServicePaths[translationKey] ?? []).includes(work.href)
+  );
   const faqs = [1, 2, 3].map((index) => ({
     question: t(`service.faq.${index}.question`),
     answer: t(`service.faq.${index}.answer`),
@@ -155,6 +166,36 @@ const ServiceLayout = ({ translationKey, image }: ServiceLayoutProps) => {
           </div>
         </div>
       </section>
+
+      {portfolio.length > 0 && (
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-3 block">
+                {t("work.label")}
+              </span>
+              <h2 className="font-display text-3xl font-bold mb-3">{t("work.gallery.title")}</h2>
+              <p className="text-muted-foreground mb-8">{t("work.gallery.description")}</p>
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {portfolio.map((work) => (
+                  <figure key={work.id} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src={work.image}
+                        alt={`${t("work.realPhoto")}: ${t(work.titleKey)}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="p-4 font-semibold text-foreground">{t(work.titleKey)}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {related.length > 0 && (
         <section className="py-16 bg-background">
