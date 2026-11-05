@@ -107,6 +107,7 @@ const translations: Record<Language, Record<string, string>> = {
     "work.portfolio.pipeReplacement": "Nové rozvody vody a odpadu",
     "work.portfolio.wcFrame": "Montáž podomietkovej WC inštalácie",
     "work.portfolio.waterFilter": "Montáž filtračného systému pod drez",
+    "work.portfolio.boilerInstallation": "Montáž bojlera a pripojenia vody",
     "work.portfolio.bathtubInstallation": "Montáž vane",
     "work.portfolio.bathtubDetail": "Detail dokončenej vane a obkladu",
 
@@ -303,7 +304,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // 9. Bojlery
     "boiler.seo.title": "Montáž a výmena bojlerov Bratislava | Servis",
-    "boiler.seo.description": "Profesionálna výmena elektrických bojlerov. Zapojenie vody a elektriny, uvedenie do prevádzky. Odvoz starého bojlera.",
+    "boiler.seo.description": "Montáž a výmena bojlerov v Bratislave. Pred zásahom preveríme miesto, viditeľné prípojky a rozsah potrebných prác.",
     "boiler.seo.keywords": "výmena bojlera, montáž bojlera, elektrický bojler, zapojenie ohrievača vody, servis bojlerov",
     "boiler.hero.title": "Montáž a výmena bojlerov",
     "boiler.hero.subtitle": "Zabezpečíme vám teplú vodu rýchlo a bezpečne",
@@ -424,6 +425,7 @@ const translations: Record<Language, Record<string, string>> = {
     "work.portfolio.pipeReplacement": "New water and drainage pipework",
     "work.portfolio.wcFrame": "Concealed WC frame installation",
     "work.portfolio.waterFilter": "Under-sink water filtration installation",
+    "work.portfolio.boilerInstallation": "Boiler installation and water connection",
     "work.portfolio.bathtubInstallation": "Bathtub installation",
     "work.portfolio.bathtubDetail": "Finished bathtub and tiling detail",
 

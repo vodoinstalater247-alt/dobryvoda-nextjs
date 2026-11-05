@@ -55,6 +55,7 @@ const relatedServices: Record<string, { href: string; translationKey: string }[]
 };
 
 const portfolioServicePaths: Record<string, string[]> = {
+  boiler: ["/montaz-bojleru"],
   wc: ["/oprava-wc"],
   faucet: ["/montaz-baterie"],
   shower: ["/montaz-sprchy"],
@@ -64,18 +65,20 @@ const portfolioServicePaths: Record<string, string[]> = {
 interface ServiceLayoutProps {
   translationKey: string;
   image: string;
+  faqs?: readonly { question: string; answer: string }[];
 }
 
-const ServiceLayout = ({ translationKey, image }: ServiceLayoutProps) => {
+const ServiceLayout = ({ translationKey, image, faqs: customFaqs }: ServiceLayoutProps) => {
   const { t } = useLanguage();
   const related = relatedServices[translationKey] ?? [];
   const portfolio = portfolioWorks.filter((work) =>
     (portfolioServicePaths[translationKey] ?? []).includes(work.href)
   );
-  const faqs = [1, 2, 3].map((index) => ({
+  const defaultFaqs = [1, 2, 3].map((index) => ({
     question: t(`service.faq.${index}.question`),
     answer: t(`service.faq.${index}.answer`),
   }));
+  const faqs = customFaqs ?? defaultFaqs;
 
   return (
     <main className="min-h-screen">

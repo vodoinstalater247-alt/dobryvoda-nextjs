@@ -2,7 +2,7 @@ import { seoData, serviceImages } from "@/lib/translations";
 import { ServiceSchemas } from "@/lib/service-schemas";
 import ServiceLayout from "@/components/ServiceLayout";
 import { makeServiceMetadata } from "@/lib/service-metadata";
-import { genericServiceFaqs } from "@/lib/generic-service-faqs";
+import { boilerServiceFaqs } from "@/lib/boiler-service-faqs";
 
 const data = seoData.boiler;
 
@@ -17,9 +17,13 @@ export default function Page() {
         description={data.description}
         slug={data.slug}
         pageName="Montáž a výmena bojlerov"
-        faqs={genericServiceFaqs}
+        faqs={boilerServiceFaqs}
       />
-      <ServiceLayout translationKey="boiler" image={serviceImages.boiler} />
+      <ServiceLayout
+        translationKey="boiler"
+        image={serviceImages.boiler}
+        faqs={boilerServiceFaqs}
+      />
     </>
   );
 }

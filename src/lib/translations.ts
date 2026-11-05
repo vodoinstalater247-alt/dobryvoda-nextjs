@@ -84,7 +84,7 @@ export const seoData: Record<
     title: "Montáž a výmena bojlerov Bratislava | Servis | Dobrý Vodár",
     // 153 chars
     description:
-      "Profesionálna výmena elektrických bojlerov v Bratislave. Zapojenie vody a elektriny, uvedenie do prevádzky. Odvoz starého bojlera. Volajte 0944 562 059.",
+      "Montáž a výmena bojlerov v Bratislave. Pred zásahom preveríme miesto, viditeľné prípojky a rozsah potrebných prác. Dohodnite si termín na 0944 562 059.",
   },
   pipes: {
     slug: "vymena-rozvodov",
@@ -98,15 +98,15 @@ export const seoData: Record<
 
 // Image mapping for each service page
 export const serviceImages: Record<string, string> = {
-  siphon: "/images/work-4.jpg",
-  wc: "/images/work-4.jpg",
-  faucet: "/images/work-6.jpg",
-  pipe: "/images/work-2.jpg",
-  shower: "/images/work-1.jpg",
+  siphon: "/images/portfolio/installed-basin-faucet.webp",
+  wc: "/images/portfolio/wc-installation-frame.webp",
+  faucet: "/images/portfolio/installed-kitchen-faucet.webp",
+  pipe: "/images/portfolio/pipe-replacement.webp",
+  shower: "/images/portfolio/shower-enclosure.webp",
   appliance: "/images/work-3.jpg",
-  valve: "/images/work-5.jpg",
-  sanitary: "/images/work-6.jpg",
-  heating: "/images/work-3.jpg",
-  boiler: "/images/work-1.jpg",
-  pipes: "/images/work-4.jpg",
+  valve: "/images/portfolio/radiator-valve.webp",
+  sanitary: "/images/portfolio/bathtub-installation.webp",
+  heating: "/images/portfolio/radiator-pipework.webp",
+  boiler: "/images/portfolio/boiler-installation.webp",
+  pipes: "/images/portfolio/bathroom-pipework.webp",
 };
