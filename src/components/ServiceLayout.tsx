@@ -6,6 +6,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingPhoneButton from "@/components/FloatingPhoneButton";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { CheckCircle2, Phone, ArrowRight } from "lucide-react";
 
@@ -55,6 +61,10 @@ interface ServiceLayoutProps {
 const ServiceLayout = ({ translationKey, image }: ServiceLayoutProps) => {
   const { t } = useLanguage();
   const related = relatedServices[translationKey] ?? [];
+  const faqs = [1, 2, 3].map((index) => ({
+    question: t(`service.faq.${index}.question`),
+    answer: t(`service.faq.${index}.answer`),
+  }));
 
   return (
     <main className="min-h-screen">
@@ -174,6 +184,23 @@ const ServiceLayout = ({ translationKey, image }: ServiceLayoutProps) => {
           </div>
         </section>
       )}
+
+      <section className="py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-3 block">{t("service.faq.label")}</span>
+            <h2 className="font-display text-3xl font-bold mb-7">{t("service.faq.title")}</h2>
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={faq.question} value={`service-faq-${index}`} className="rounded-xl border border-border bg-card px-6">
+                  <AccordionTrigger className="text-left font-semibold hover:no-underline">{faq.question}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-7">{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section id="kontakt" className="py-20 bg-primary text-primary-foreground">

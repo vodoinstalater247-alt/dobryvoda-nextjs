@@ -67,6 +67,7 @@ const HeroSection = () => {
                   alt={t("hero.image.alt")}
                   width={640}
                   height={480}
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   className="w-full h-auto object-cover"
                   priority
                 />

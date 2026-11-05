@@ -18,9 +18,10 @@ interface FocusedServicePageProps {
   imageAlt: string;
   sections: ContentSection[];
   relatedLinks: RelatedLink[];
+  faqs: readonly { question: string; answer: string }[];
 }
 
-export default function FocusedServicePage({ eyebrow, title, lead, image, imageAlt, sections, relatedLinks }: FocusedServicePageProps) {
+export default function FocusedServicePage({ eyebrow, title, lead, image, imageAlt, sections, relatedLinks, faqs }: FocusedServicePageProps) {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -49,6 +50,11 @@ export default function FocusedServicePage({ eyebrow, title, lead, image, imageA
         <section className="mt-14 border-t border-border pt-10">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary">Ďalšie služby</p>
           <div className="mt-5 grid gap-4 sm:grid-cols-3">{relatedLinks.map((link) => <Link key={link.href} href={link.href} className="group rounded-xl border border-border p-5 font-semibold text-foreground transition hover:border-primary/40 hover:shadow-md">{link.label}<span className="mt-3 flex items-center text-sm font-medium text-primary">Zistiť viac <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span></Link>)}</div>
+        </section>
+        <section className="mt-14 border-t border-border pt-10">
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary">Časté otázky</p>
+          <h2 className="mt-2 font-display text-3xl font-bold text-foreground">Pred objednaním služby</h2>
+          <div className="mt-6 space-y-3">{faqs.map((faq) => <details key={faq.question} className="rounded-xl border border-border bg-card p-5"><summary className="cursor-pointer font-semibold text-foreground">{faq.question}</summary><p className="mt-4 leading-7 text-muted-foreground">{faq.answer}</p></details>)}</div>
         </section>
       </article>
       <section className="bg-primary py-16 text-primary-foreground"><div className="container mx-auto max-w-3xl px-4 text-center"><h2 className="font-display text-3xl font-bold">Potrebujete pomoc s vodoinštaláciou?</h2><p className="mt-4 text-lg opacity-90">Zavolajte nám alebo napíšte správu. Rozsah práce a termín dohodneme vopred.</p><Button className="mt-8" size="lg" variant="secondary" asChild><a href={`tel:${businessProfile.phone}`}>{businessProfile.phoneDisplay}</a></Button></div></section>

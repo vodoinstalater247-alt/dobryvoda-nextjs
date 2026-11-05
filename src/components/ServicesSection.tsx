@@ -1,5 +1,6 @@
 "use client";
 import { AlertTriangle, Wrench, ShieldCheck, Clock } from "lucide-react";
+import Link from "next/link";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -10,22 +11,23 @@ const ServicesSection = () => {
   const { t } = useLanguage();
 
   const emergencyServices = [
-    t("services.emergency.1"),
-    t("services.emergency.2"),
-    t("services.emergency.3"),
-    t("services.emergency.4"),
+    { label: t("services.emergency.1"), href: "/oprava-potrubia" },
+    { label: t("services.emergency.2"), href: "/oprava-potrubia" },
+    { label: t("services.emergency.3"), href: "/vymena-rozvodov" },
+    { label: t("services.emergency.4"), href: "/upchaty-odpad" },
   ];
 
   const regularServices = [
-    t("services.regular.1"),
-    t("services.regular.2"),
-    t("services.regular.3"),
-    t("services.regular.4"),
-    t("services.regular.5"),
-    t("services.regular.6"),
-    t("services.regular.7"),
-    t("services.regular.8"),
-    t("services.regular.9"),
+    { label: t("services.regular.1"), href: "/vymena-sifonu" },
+    { label: t("services.regular.2"), href: "/montaz-baterie" },
+    { label: t("services.regular.3"), href: "/oprava-wc" },
+    { label: t("services.regular.4"), href: "/vymena-ventilov" },
+    { label: t("services.regular.5"), href: "/montaz-sanity" },
+    { label: t("services.regular.6"), href: "/oprava-potrubia" },
+    { label: t("services.regular.7"), href: "/vymena-rozvodov" },
+    { label: t("services.regular.8"), href: "/kanalizacia" },
+    { label: t("services.regular.9"), href: "/oprava-kurenia" },
+    { label: t("services.regular.10"), href: "/montaz-bojleru" },
   ];
 
   return (
@@ -73,7 +75,7 @@ const ServicesSection = () => {
               {emergencyServices.map((service, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <Clock className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">{service}</span>
+                  <Link href={service.href} className="text-muted-foreground hover:text-primary hover:underline underline-offset-4">{service.label}</Link>
                 </li>
               ))}
             </ul>
@@ -99,7 +101,7 @@ const ServicesSection = () => {
               {regularServices.map((service, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <ShieldCheck className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">{service}</span>
+                  <Link href={service.href} className="text-muted-foreground hover:text-primary hover:underline underline-offset-4">{service.label}</Link>
                 </li>
               ))}
             </ul>

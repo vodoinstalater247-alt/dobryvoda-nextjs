@@ -2,6 +2,7 @@ import { seoData, serviceImages } from "@/lib/translations";
 import { ServiceSchemas } from "@/lib/service-schemas";
 import ServiceLayout from "@/components/ServiceLayout";
 import { makeServiceMetadata } from "@/lib/service-metadata";
+import { genericServiceFaqs } from "@/lib/generic-service-faqs";
 
 const data = seoData.appliance;
 
@@ -16,6 +17,7 @@ export default function Page() {
         description={data.description}
         slug={data.slug}
         pageName="Zapojenie spotrebičov"
+        faqs={genericServiceFaqs}
       />
       <ServiceLayout translationKey="appliance" image={serviceImages.appliance} />
     </>
