@@ -187,7 +187,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Siphon Page Specific (SK)
     "siphon.seo.title": "Výmena sifónu Bratislava | Oprava & Montáž | Dobrý Vodár",
-    "siphon.seo.description": "Profesionálna výmena sifónu v kuchyni, kúpeľni a WC. Riešime pretekanie, zápach a upchaté sifóny. Rýchly výjazd v Bratislave. Volajte 0944 562 059.",
+    "siphon.seo.description": "Výmena sifónu v kuchyni, kúpeľni a WC v Bratislave. Riešime pretekanie, zápach a upchaté sifóny. Rozsah práce si vopred dohodneme.",
     "siphon.seo.keywords": "výmena sifónu, oprava sifónu, montáž sifónu, sifón umývadlo, sifón vaňa, pretekajúci sifón, vodoinštalatér bratislava",
     "siphon.hero.title": "Výmena a oprava sifónov",
     "siphon.hero.subtitle": "Profesionálne riešenie pre vašu kuchyňu a kúpeľňu",
@@ -200,7 +200,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // 1. Oprava WC
     "wc.seo.title": "Oprava a montáž WC Bratislava | Pretekajúce WC | Dobrý Vodár",
-    "wc.seo.description": "Rýchla oprava pretekajúceho WC, výmena splachovača a montáž nových toaliet v Bratislave. Geberit servis. Volajte ihneď.",
+    "wc.seo.description": "Oprava pretekajúceho WC, výmena splachovača a montáž nových toaliet v Bratislave. Pred zásahom preveríme problém a dohodneme postup.",
     "wc.seo.keywords": "oprava wc bratislava, pretekajúce wc, výmena záchoda, montáž geberit, inštalatér wc",
     "wc.hero.title": "Oprava a montáž WC",
     "wc.hero.subtitle": "Stop pretekajúcej vode a nefunkčnému splachovaniu",
@@ -226,7 +226,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // 3. Oprava potrubia (Leak)
     "pipe.seo.title": "Oprava prasknutého potrubia Bratislava | Únik vody",
-    "pipe.seo.description": "Havarijná oprava vodovodného potrubia. Lokalizácia a odstránenie úniku vody. Rýchly výjazd v celej Bratislave.",
+    "pipe.seo.description": "Havarijná oprava vodovodného potrubia. Riešime viditeľné úniky vody a poškodené potrubie. Havarijná služba je dostupná 24/7.",
     "pipe.seo.keywords": "oprava potrubia, prasknuté potrubie, únik vody bratislava, havarijná služba voda, inštalatér potrubie",
     "pipe.hero.title": "Oprava vodovodného potrubia",
     "pipe.hero.subtitle": "Rýchly zásah pri úniku vody a prasknutom potrubí",
@@ -252,7 +252,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // 5. Zapojenie spotrebičov
     "appliance.seo.title": "Zapojenie práčky a umývačky Bratislava | Dobrý Vodár",
-    "appliance.seo.description": "Odborné zapojenie práčky, umývačky riadu a sušičky. Úprava prívodu vody a odpadu. Pečiatka pre záruku.",
+    "appliance.seo.description": "Zapojenie práčky, umývačky riadu a sušičky. Preveríme prívod vody, odpad a priestor pre spotrebič pred dohodnutím rozsahu práce.",
     "appliance.seo.keywords": "zapojenie práčky, zapojenie umývačky, inštalácia spotrebičov, pripojenie vody, vodár bratislava",
     "appliance.hero.title": "Zapojenie spotrebičov",
     "appliance.hero.subtitle": "Profesionálne pripojenie práčky a umývačky riadu",

@@ -12,7 +12,7 @@ export const seoData: Record<
     title: "Výmena sifónu Bratislava | Oprava & Montáž | Dobrý Vodár",
     // 151 chars
     description:
-      "Profesionálna výmena sifónu v kuchyni, kúpeľni a WC. Riešime pretekanie, zápach a upchaté sifóny. Rýchly výjazd v Bratislave. Volajte 0944 562 059.",
+      "Výmena sifónu v kuchyni, kúpeľni a WC v Bratislave. Riešime pretekanie, zápach a upchaté sifóny. Rozsah práce si vopred dohodneme. Volajte 0944 562 059.",
   },
   wc: {
     slug: "oprava-wc",
@@ -20,7 +20,7 @@ export const seoData: Record<
     title: "Oprava WC Bratislava | Pretekajúce WC | Dobrý Vodár",
     // 155 chars
     description:
-      "Rýchla oprava pretekajúceho WC, výmena splachovača a montáž nových toaliet v Bratislave. Geberit servis. Rýchly výjazd, férové ceny. Volajte 0944 562 059.",
+      "Oprava pretekajúceho WC, výmena splachovača a montáž nových toaliet v Bratislave. Pred zásahom preveríme problém a dohodneme postup. Volajte 0944 562 059.",
   },
   faucet: {
     slug: "montaz-baterie",
@@ -36,7 +36,7 @@ export const seoData: Record<
     title: "Oprava potrubia Bratislava | Únik vody | Dobrý Vodár",
     // 155 chars
     description:
-      "Havarijná oprava vodovodného potrubia v Bratislave. Lokalizácia a odstránenie úniku vody. Rýchly výjazd do 60 minút. Pohotovosť 24/7. Volajte 0944 562 059.",
+      "Havarijná oprava vodovodného potrubia v Bratislave. Riešime viditeľné úniky vody a poškodené potrubie. Havarijná služba je dostupná 24/7. Volajte 0944 562 059.",
   },
   shower: {
     slug: "montaz-sprchy",
@@ -44,7 +44,7 @@ export const seoData: Record<
     title: "Montáž sprchového kúta Bratislava | Inštalácia | Dobrý Vodár",
     // 153 chars
     description:
-      "Profesionálna montáž sprchových kútov, vaničiek a zásten v Bratislave. Silikónovanie a utesnenie sprchy. Kvalitná práca, férové ceny. Volajte 0944 562 059.",
+      "Montáž sprchových kútov, vaničiek a zásten v Bratislave. Pomôžeme so silikónovaním a utesnením sprchy podľa stavu miesta. Volajte 0944 562 059.",
   },
   appliance: {
     slug: "zapojenie-spotrebicov",
@@ -52,7 +52,7 @@ export const seoData: Record<
     title: "Zapojenie práčky a umývačky Bratislava | Dobrý Vodár",
     // 152 chars
     description:
-      "Odborné zapojenie práčky, umývačky riadu a sušičky v Bratislave. Úprava prívodu vody a odpadu. Pečiatka pre záruku. Rýchly servis. Volajte 0944 562 059.",
+      "Zapojenie práčky, umývačky riadu a sušičky v Bratislave. Preveríme prívod vody, odpad a priestor pre spotrebič. Rozsah práce dohodneme vopred. Volajte 0944 562 059.",
   },
   valve: {
     slug: "vymena-ventilov",
@@ -60,7 +60,7 @@ export const seoData: Record<
     title: "Výmena ventilov Bratislava | Oprava ventilu | Dobrý Vodár",
     // 152 chars
     description:
-      "Výmena nefunkčných a starých rohových ventilov pod umývadlom, pri WC alebo práčke v Bratislave. Predíďte vytopeniu. Rýchly výjazd. Volajte 0944 562 059.",
+      "Výmena nefunkčných a starých rohových ventilov pod umývadlom, pri WC alebo práčke v Bratislave. Pomôžeme preveriť viditeľný stav ventilu a prípojok. Volajte 0944 562 059.",
   },
   sanitary: {
     slug: "montaz-sanity",
@@ -76,7 +76,7 @@ export const seoData: Record<
     title: "Oprava a výmena radiátorov Bratislava | Kúrenár | Dobrý Vodár",
     // 153 chars
     description:
-      "Montáž, výmena a oprava radiátorov v Bratislave. Riešenie tečúcich ventilov a odvzdušnenie systému. Kúrenárske práce s garanciou. Volajte 0944 562 059.",
+      "Montáž, výmena a oprava radiátorov v Bratislave. Riešime tečúce ventily a úpravy pripojenia radiátorov podľa stavu systému. Volajte 0944 562 059.",
   },
   boiler: {
     slug: "montaz-bojleru",
@@ -92,7 +92,7 @@ export const seoData: Record<
     title: "Výmena rozvodov vody Bratislava | Rekonštrukcia | Dobrý Vodár",
     // 155 chars
     description:
-      "Kompletná výmena vodovodných a odpadových rozvodov v bytoch a domoch v Bratislave. Rekonštrukcia stúpačiek a inštalácií. Férové ceny. Volajte 0944 562 059.",
+      "Výmena vodovodných a odpadových rozvodov v bytoch a domoch v Bratislave. Pripravíme nové rozvody pri rekonštrukcii podľa možností priestoru. Volajte 0944 562 059.",
   },
 };
 
