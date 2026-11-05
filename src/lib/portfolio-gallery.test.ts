@@ -3,7 +3,7 @@ import test from "node:test";
 import { portfolioWorks } from "./portfolio-gallery";
 
 test("portfolio gallery contains the selected optimized client photos", () => {
-  assert.equal(portfolioWorks.length, 18);
+  assert.equal(portfolioWorks.length, 21);
 
   const ids = portfolioWorks.map((work) => work.id);
   const images = portfolioWorks.map((work) => work.image);
