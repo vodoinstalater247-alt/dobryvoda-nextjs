@@ -27,9 +27,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.badge": "🔧 Spolu s vami 24/7",
-    "hero.title1": "Vodoinštalatér",
-    "hero.title2": "Bratislava",
-    "hero.title3": "pre váš domov",
+    "hero.title1": "Vodoinštalatér Bratislava: havarijné opravy 24/7",
+    "hero.title2": "",
+    "hero.title3": "",
     "hero.description": "Profesionálna inštalácia a oprava vodovodných systémov. Riešime všetky problémy s vodoinštaláciou rýchlo a spoľahlivo.",
     "hero.benefit1": "Havarijné výjazdy: 24/7",
     "hero.benefit2": "Bežné práce PON-PIA 7:00 - 17:00",

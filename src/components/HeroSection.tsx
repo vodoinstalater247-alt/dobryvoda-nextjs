@@ -26,8 +26,8 @@ const HeroSection = () => {
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
               {t("hero.title1")}
-              <span className="text-gradient block">{t("hero.title2")}</span>
-              {t("hero.title3")}
+              {t("hero.title2") && <span className="text-gradient block">{t("hero.title2")}</span>}
+              {t("hero.title3") && t("hero.title3")}
             </h1>
             
             <p className="text-lg text-muted-foreground mb-8 max-w-xl">
