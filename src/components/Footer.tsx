@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground py-16 pb-28 md:pb-16">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image src="/images/logo-new.png" alt="Dobrý vodár - vodoinštalatér Bratislava" width={160} height={80} className="h-20 w-auto mb-4" />
@@ -151,6 +151,23 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
+          </div>
+
+          {/* Billing details */}
+          <div>
+            <h3 className="font-display font-bold text-lg mb-4">{t("footer.billing")}</h3>
+            <ul className="space-y-2 text-primary-foreground/70">
+              <li className="font-semibold text-primary-foreground">{businessProfile.legalName}</li>
+              <li>IČO: {businessProfile.ico}</li>
+              <li>
+                <a
+                  href={`mailto:${businessProfile.email}`}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  {businessProfile.email}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 

@@ -178,6 +178,7 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.quickLinks": "Rýchle odkazy",
     "footer.services": "Služby",
     "footer.contact": "Kontakt",
+    "footer.billing": "Fakturačné údaje",
     "footer.service.1": "Havarijné služby 24/7",
     "footer.service.2": "Montáž sanity",
     "footer.service.3": "Opravy potrubí",
@@ -186,7 +187,7 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.service.6": "Krtkovanie",
     "footer.service.7": "Filtre na vodu",
     "footer.hours": "PON-PIA 7:00 - 17:00",
-    "footer.emergency": "Havárie: 24/7",
+    "footer.emergency": "Havárie: 24/7 · výjazd do 2 hodín",
     "footer.copyright": "Všetky práva vyhradené.",
 
     // Siphon Page Specific (SK)
@@ -500,6 +501,7 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.quickLinks": "Quick Links",
     "footer.services": "Services",
     "footer.contact": "Contact",
+    "footer.billing": "Billing details",
     "footer.service.1": "Emergency Services 24/7",
     "footer.service.2": "Sanitary Installation",
     "footer.service.3": "Pipe Repairs",
@@ -508,7 +510,7 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.service.6": "Drain Cleaning",
     "footer.service.7": "Water Filters",
     "footer.hours": "MON-FRI 7:00 - 17:00",
-    "footer.emergency": "Emergency: 24/7",
+    "footer.emergency": "Emergencies: 24/7 · arrival within 2 hours",
     "footer.copyright": "All rights reserved.",
 
     // Siphon Page Specific (EN)
