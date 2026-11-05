@@ -19,6 +19,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Navbar
     "nav.home": "Domov",
     "nav.services": "Služby",
+    "nav.pricing": "Cenník",
     "nav.work": "Naše práce",
     "nav.references": "Referencie",
     "nav.blog": "Blog",
@@ -68,6 +69,7 @@ const translations: Record<Language, Record<string, string>> = {
     "services.regular.10": "Montáž a výmena bojlerov",
     "services.pricing.title": "Ceny sú individuálne",
     "services.pricing.description": "Presná suma závisí od typu práce a stavu zariadenia. Pre presnú cenu ma kontaktujte telefonicky alebo správou.",
+    "services.pricing.link": "Pozrieť cenník",
     "service.related.title": "Súvisiace služby",
     "service.related.link": "Zistiť viac",
     "service.faq.label": "Časté otázky",
@@ -342,6 +344,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Navbar
     "nav.home": "Home",
     "nav.services": "Services",
+    "nav.pricing": "Price list",
     "nav.work": "Our Work",
     "nav.references": "References",
     "nav.blog": "Blog",
@@ -391,6 +394,7 @@ const translations: Record<Language, Record<string, string>> = {
     "services.regular.10": "Boiler installation and replacement",
     "services.pricing.title": "Prices are individual",
     "services.pricing.description": "The exact amount depends on the type of work and condition of the equipment. Contact me by phone or message for an exact price.",
+    "services.pricing.link": "View price list",
     "service.related.title": "Related services",
     "service.related.link": "Learn more",
     "service.faq.label": "Frequently asked questions",

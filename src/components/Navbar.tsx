@@ -14,6 +14,7 @@ const Navbar = () => {
   const navLinks = [
     { name: t("nav.home"), href: "/#domov" },
     { name: t("nav.services"), href: "/#sluzby" },
+    { name: t("nav.pricing"), href: "/cennik" },
     { name: t("nav.work"), href: "/#prace" },
     { name: t("nav.references"), href: "/#referencie" },
     { name: t("nav.blog"), href: "/blog" },
@@ -30,7 +31,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.href}

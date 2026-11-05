@@ -160,12 +160,20 @@ const ServiceLayout = ({ translationKey, image, faqs: customFaqs }: ServiceLayou
               <h2 className="font-display text-2xl font-bold mb-2">{t("services.pricing.title")}</h2>
               <p className="text-muted-foreground">{t("services.pricing.description")}</p>
             </div>
-            <Button variant="outline" asChild className="shrink-0">
-              <a href="tel:+421944562059">
-                <Phone className="mr-2 h-4 w-4" />
-                {t("hero.cta.call")}
-              </a>
-            </Button>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button variant="outline" asChild className="shrink-0">
+                <Link href="/cennik">
+                  {t("services.pricing.link")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button variant="outline" asChild className="shrink-0">
+                <a href="tel:+421944562059">
+                  <Phone className="mr-2 h-4 w-4" />
+                  {t("hero.cta.call")}
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

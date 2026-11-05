@@ -13,6 +13,7 @@ const Footer = () => {
   const quickLinks = [
     { name: t("nav.home"), href: "/" },
     { name: t("nav.services"), href: "/#sluzby" },
+    { name: t("nav.pricing"), href: "/cennik" },
     { name: t("nav.work"), href: "/#prace" },
     { name: t("nav.references"), href: "/#referencie" },
     { name: t("nav.blog"), href: "/blog" },
