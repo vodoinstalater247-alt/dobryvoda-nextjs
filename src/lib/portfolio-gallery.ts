@@ -20,6 +20,7 @@ export const portfolioWorks: readonly PortfolioWork[] = [
   { id: "pipe-replacement", image: "/images/portfolio/pipe-replacement.webp", href: "/oprava-potrubia", titleKey: "work.portfolio.pipeReplacement" },
   { id: "wc-installation-frame", image: "/images/portfolio/wc-installation-frame.webp", href: "/oprava-wc", titleKey: "work.portfolio.wcFrame" },
   { id: "water-filtration-installation", image: "/images/portfolio/water-filtration-installation.webp", href: "/filtre-na-vodu", titleKey: "work.portfolio.waterFilter" },
+  { id: "drain-camera-inspection", image: "/images/portfolio/drain-camera-inspection.webp", href: "/upchaty-odpad", titleKey: "work.portfolio.drainInspection" },
   { id: "boiler-installation", image: "/images/portfolio/boiler-installation.webp", href: "/montaz-bojleru", titleKey: "work.portfolio.boilerInstallation" },
   { id: "bathtub-installation", image: "/images/portfolio/bathtub-installation.webp", href: "/montaz-sanity", titleKey: "work.portfolio.bathtubInstallation" },
   { id: "bathtub-detail", image: "/images/portfolio/bathtub-detail.webp", href: "/montaz-sanity", titleKey: "work.portfolio.bathtubDetail" },
