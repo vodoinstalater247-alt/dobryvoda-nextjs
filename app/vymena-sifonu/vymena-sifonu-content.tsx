@@ -12,6 +12,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingPhoneButton from "@/components/FloatingPhoneButton";
 import PrivacyNotice from "@/components/PrivacyNotice";
+import ServiceDetailsSection from "@/components/ServiceDetailsSection";
 
 export default function VymenaSifonuContent() {
   const [formData, setFormData] = useState({
@@ -339,6 +340,7 @@ export default function VymenaSifonuContent() {
       </section>
 
       {/* FAQ Section */}
+      <ServiceDetailsSection serviceKey="siphon" />
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">

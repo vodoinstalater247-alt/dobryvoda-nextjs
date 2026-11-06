@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import FloatingPhoneButton from "@/components/FloatingPhoneButton";
 import Link from "next/link";
 import PrivacyNotice from "@/components/PrivacyNotice";
+import ServiceDetailsSection from "@/components/ServiceDetailsSection";
 
 export default function OpravaPotrabiaContent() {
   const [formData, setFormData] = useState({
@@ -323,6 +324,7 @@ export default function OpravaPotrabiaContent() {
       </section>
 
       {/* FAQ Section */}
+      <ServiceDetailsSection serviceKey="pipes" />
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">

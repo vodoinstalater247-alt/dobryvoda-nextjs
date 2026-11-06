@@ -15,6 +15,7 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext";
 import { CheckCircle2, Phone, ArrowRight } from "lucide-react";
 import { portfolioWorks } from "@/lib/portfolio-gallery";
+import ServiceDetailsSection from "@/components/ServiceDetailsSection";
 
 const relatedServices: Record<string, { href: string; translationKey: string }[]> = {
   boiler: [
@@ -177,6 +178,10 @@ const ServiceLayout = ({ translationKey, image, faqs: customFaqs }: ServiceLayou
           </div>
         </div>
       </section>
+
+      {(["boiler", "wc", "faucet", "shower", "pipes"].includes(translationKey)) && (
+        <ServiceDetailsSection serviceKey={translationKey as "boiler" | "wc" | "faucet" | "pipes" | "shower"} />
+      )}
 
       {portfolio.length > 0 && (
         <section className="py-16 bg-background">
