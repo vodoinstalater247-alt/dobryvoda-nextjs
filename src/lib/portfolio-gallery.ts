@@ -7,6 +7,8 @@ export type PortfolioWork = {
 
 export const portfolioWorks: readonly PortfolioWork[] = [
   { id: "installed-kitchen-faucet", image: "/images/portfolio/installed-kitchen-faucet.webp", href: "/montaz-baterie", titleKey: "work.portfolio.kitchenFaucet" },
+  { id: "siphon-replacement-plastic", image: "/images/portfolio/siphon-replacement-plastic.webp", href: "/vymena-sifonu", titleKey: "work.portfolio.siphonReplacement" },
+  { id: "siphon-replacement-metal", image: "/images/portfolio/siphon-replacement-metal.webp", href: "/vymena-sifonu", titleKey: "work.portfolio.siphonReplacementMetal" },
   { id: "installed-basin-faucet", image: "/images/portfolio/installed-basin-faucet.webp", href: "/montaz-baterie", titleKey: "work.portfolio.basinFaucet" },
   { id: "pullout-kitchen-faucet", image: "/images/portfolio/pullout-kitchen-faucet.webp", href: "/montaz-baterie", titleKey: "work.portfolio.pulloutFaucet" },
   { id: "bath-mixer-installation", image: "/images/portfolio/bath-mixer-installation.webp", href: "/montaz-baterie", titleKey: "work.portfolio.bathMixer" },
