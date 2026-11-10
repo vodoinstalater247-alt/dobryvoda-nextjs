@@ -23,7 +23,7 @@ const Footer = () => {
   const serviceLinks = [
     { name: t("footer.service.1"), href: "/oprava-potrubia" },
     { name: t("footer.service.2"), href: "/montaz-sanity" },
-    { name: t("footer.service.3"), href: "/vymena-sifonu" },
+    { name: t("footer.service.3"), href: "/oprava-potrubia" },
     { name: t("footer.service.4"), href: "/kanalizacia" },
     { name: t("footer.service.5"), href: "/oprava-kurenia" },
     { name: t("footer.service.6"), href: "/krtkovanie" },
